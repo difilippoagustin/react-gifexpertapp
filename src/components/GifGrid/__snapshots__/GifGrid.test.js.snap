@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GifGrid /> should display correctly 1`] = `
+<Fragment>
+  <h3
+    className="animate__animated animate__fadeInDown"
+  >
+    category test
+  </h3>
+  <p>
+    "Loading data..."
+  </p>
+  <div
+    className="card-grid"
+  />
+</Fragment>
+`;

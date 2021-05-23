@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { AddCategorie } from "./components/AddCategorie";
-import GifGrid from "./components/GifGrid";
-export const GifExpertApp = () => {
-  const [categories, setCategories] = useState(["Simpsons"]);
+import { AddCategorie } from "../AddCategorie/AddCategorie";
+import GifGrid from "../GifGrid/GifGrid";
+export const GifExpertApp = ({ defaultCategories = [] }) => {
+  // const [categories, setCategories] = useState(["Simpsons"]);
+  const [categories, setCategories] = useState(defaultCategories);
 
   return (
     <>
@@ -17,4 +18,3 @@ export const GifExpertApp = () => {
     </>
   );
 };
-// AoFoTkxKPHX3mXe9F5iI9sC5Ynv7cfZz

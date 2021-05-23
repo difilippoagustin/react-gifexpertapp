@@ -1,6 +1,7 @@
 import React from "react";
-import { GifGridItem } from "./GifGridItem";
-import { useFetchGifs } from "../hooks/useFetchGifs";
+import PropTypes from "prop-types";
+import { GifGridItem } from "../GifGridItem/GifGridItem";
+import { useFetchGifs } from "../../hooks/useFetchGifs/useFetchGifs";
 
 export default function GifGrid({ category }) {
   const { data: images, isLoading } = useFetchGifs(category);
@@ -8,7 +9,7 @@ export default function GifGrid({ category }) {
   return (
     <>
       <h3 className="animate__animated animate__fadeInDown">{category}</h3>
-      {isLoading && "Loading data..."}
+      {isLoading && <p>"Loading data..."</p>}
       <div className="card-grid">
         {images.map((image) => (
           <GifGridItem key={image.id} {...image} />
@@ -17,3 +18,6 @@ export default function GifGrid({ category }) {
     </>
   );
 }
+GifGrid.propTypes = {
+  category: PropTypes.string.isRequired,
+};
